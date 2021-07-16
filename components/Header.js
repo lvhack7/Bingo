@@ -51,7 +51,7 @@ function Header() {
                     height={40} onClick={() => router.push('/')}/>
                 <form onSubmit={search} className="flex flex-grow border border-gray-200 rounded-lg
                     shadow-lg px-6 py-3 ml-7 mr-5 max-w-3xl items-center">
-                    <input ref={searchRef} className="flex-grow w-full focus:outline-none"/>
+                    <input ref={searchRef} defaultValue={router.query.term} className="flex-grow w-full focus:outline-none"/>
                     <XIcon className="h-5 text-gray-500 cursor-pointer mr-3 transition duration-100 transform 
                     hover:scale-110"
                     onClick={() => {searchRef.current.value=''}}/>
