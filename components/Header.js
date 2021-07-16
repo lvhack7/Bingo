@@ -1,4 +1,5 @@
 import {useRouter} from 'next/router'
+import Image from 'next/image'
 import {useRef} from 'react' 
 import MicrophoneIcon from '@heroicons/react/outline/MicrophoneIcon'
 import SearchIcon from '@heroicons/react/outline/SearchIcon'
@@ -41,7 +42,7 @@ function Header() {
     return (
         <header className="fixed w-full bg-white">
             <div className="flex px-4 pt-4 items-center">
-                <img 
+                <Image 
                     className="cursor-pointer"
                     src="/14483.jpg" 
                     alt="icon" 
@@ -63,7 +64,7 @@ function Header() {
                 <div className='flex ml-auto items-center'>
                     <CogIcon className="h-7 mr-6 text-gray-700"/>
                     {isAuth ? 
-                        <img className="h-10 rounded-full cursor-pointer 
+                        <Image className="h-10 rounded-full cursor-pointer 
                         transition duration-150 transform hover:scale-110" loading="lazy" src={currentUser && currentUser.photoURL} alt="" />
                         :
                         <IconButton onClick={handleClick}>
