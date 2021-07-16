@@ -27,8 +27,6 @@ export default function Home() {
       alert("Failed to sign in!")
     }
   }
-  
-  console.log('Hello' + process.env.REACT_APP_FIREBASE_APP_ID)
 
   const search = e => {
     e.preventDefault()
@@ -61,7 +59,7 @@ export default function Home() {
             </IconButton>
             {isAuth ?
             <div>
-              <Image className="h-10 rounded-full cursor-pointer transition duration-150 transform hover:scale-110" loading="lazy" src={currentUser && currentUser.photoURL} alt="" />
+              <Image className="rounded-full cursor-pointer transition duration-150 transform hover:scale-110" loading="lazy" width={40} height={40} src={currentUser && currentUser.photoURL} alt="" />
             </div> : 
             <IconButton onClick={handleClick}>
               <AccountCircleOutlinedIcon/>  
@@ -69,7 +67,7 @@ export default function Home() {
           </div>
       </header>
       <form onSubmit={search} className="flex flex-row flex-grow justify-center items-center mt-10">
-        <Image src="/14483.jpg" alt="icon" loading="lazy" width="100" height="50"/>
+        <Image src="/14483.jpg" alt="icon" loading="lazy" width={100} height={50}/>
         <div className="flex w-full ml-5 hover:shadow-lg focus-within:shadow-lg max-w-md rounded-lg
         border border-gray-200 px-5 py-3 items-center sm:max-w-xl lg:max-w-2xl">
           <input ref={searchRef} type="text" placeholder="Search..." className="flex-grow focus:outline-none " />
