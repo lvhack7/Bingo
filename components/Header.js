@@ -45,9 +45,10 @@ function Header() {
                 <Image 
                     className="cursor-pointer"
                     src="/14483.jpg" 
-                    alt="icon" 
+                    alt="icon"
+                    loading="lazy"
                     width={90} 
-                    height={20} onClick={() => router.push('/')}/>
+                    height={40} onClick={() => router.push('/')}/>
                 <form onSubmit={search} className="flex flex-grow border border-gray-200 rounded-lg
                     shadow-lg px-6 py-3 ml-7 mr-5 max-w-3xl items-center">
                     <input ref={searchRef} className="flex-grow w-full focus:outline-none"/>
