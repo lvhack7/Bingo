@@ -1,3 +1,3 @@
-export const API_KEY = "AIzaSyD9fCFRFyXSZsSI8OfXHou8O-pmwmHVaqo"
+export const API_KEY = //Api key
 
-export const CONTEXT_KEY = "c3a9ac63382c3c619"
+export const CONTEXT_KEY = //Context key
